@@ -168,7 +168,7 @@ bool BaseProc::startPreparingForPreDelete_() {
 }
 
 void BaseProc::destruct_(int should_destruct) {
-    if (should_destruct != 0) {
+    if (should_destruct == 1) {
         BaseProcMgr::instance()->eraseFromPreDeleteList(*this);
         BaseProcMgr::instance()->unregisterProc(*this);
 #pragma clang diagnostic push
@@ -619,7 +619,7 @@ bool BaseProc::acquire(ActorLinkConstDataAccess& accessor) {
 }
 
 void BaseProc::release() {
-    if (mRefCount > 0)
+    if (mRefCount >= 1)
         mRefCount--;
 }
 
