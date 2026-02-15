@@ -35,6 +35,7 @@ KSYS_CHECK_SIZE_NX150(TaskMgrRequest, 0x18);
 
 class TaskMgr {
     SEAD_RTTI_BASE(TaskMgr)
+
 public:
     explicit TaskMgr(sead::Heap* heap);
     virtual ~TaskMgr();

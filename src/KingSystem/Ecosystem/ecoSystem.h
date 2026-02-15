@@ -137,6 +137,7 @@ KSYS_CHECK_SIZE_NX150(EcosystemTraits, 0x34);
 
 class Ecosystem {
     SEAD_SINGLETON_DISPOSER(Ecosystem)
+
 private:
     Ecosystem() = default;
     virtual ~Ecosystem();
